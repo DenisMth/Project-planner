@@ -11,32 +11,34 @@ function displayExisting(variable, name, elem){
     }
 }
 
-function deleteTitle(){
-    let title = document.querySelector("h1");
-    if (title){
-        title.remove();
+function deleteElement(element){
+    let text = document.querySelector("p");
+    if (text){
+        text.remove();
     }
 }
 
-function newTime(){
+function newTime(future, htmlElement){
 
-    deleteTitle();
+    deleteElement(document.getElementsByClassName("remainingTimer"));
 
     now = new Date();
     let interval = dateFns.intervalToDuration({start : now, end : future});
-    let body = document.querySelector("body");
-    let title = document.createElement("h1");
-    let titleContent = document.createTextNode("");
+    let para = document.createElement("p");
+    para.className = "remainingTimer";
+    let paraContent = document.createTextNode("");
 
     for (let element in interval) {
-        displayExisting(interval[element], element, title);
+        displayExisting(interval[element], element, para);
     };
     let text = document.createTextNode("remaining");
-    title.appendChild(text);
+    para.appendChild(text);
 
-    title.appendChild(titleContent);
-    body.appendChild(title);
+    para.appendChild(paraContent);
+    htmlElement.appendChild(para);
     
 }
 
-setInterval(newTime, 1000);
+export function displayTimer(future, htmlElement){
+    setInterval(newTime, 1000, future, htmlElement);
+}
