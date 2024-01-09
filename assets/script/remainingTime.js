@@ -1,4 +1,8 @@
 import * as dateFns from 'https://cdn.jsdelivr.net/npm/date-fns@2.24.0/esm/index.js';
+//import {format} from "date-fns";
+
+let now = new Date();
+let future = new Date(now.setDate(now.getDate() + 14));
 
 function displayExisting(variable, name, elem){
     if (variable){
@@ -18,8 +22,7 @@ function newTime(){
 
     deleteTitle();
 
-    let now = new Date();
-    let future = new Date('2024-01-23');
+    now = new Date();
     let interval = dateFns.intervalToDuration({start : now, end : future});
     let body = document.querySelector("body");
     let title = document.createElement("h1");
