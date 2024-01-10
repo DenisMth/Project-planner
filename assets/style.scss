@@ -97,27 +97,31 @@ ul {
 }
  }
  ul{
-    li{
-       span{
-        position: absolute;
-        right: 0;
-        top: 5px;
-        width: 40px;
-        height: 40px;
-        font-size: 22px;
-        color: #ff5945;
-        line-height: 40px;
-        text-align: center;
-        border-radius: 50%;
-                            &:hover{
-                                background: #edeef0;
-                                
-
+    div{
+        position:relative;
+        background-color:rgb(192, 192, 192);
+        padding:12px;
+        border-radius:16px;
+        margin:0.5rem;
+        span{
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            width: 40px;
+            height: 40px;
+            font-size: 22px;
+            color: #ff5945;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 50%;
+                                &:hover{
+                                    cursor:pointer;
+                                    background: #edeef0;
+                                }
         }
     }
  }
- }
-.status{
+#status{
     padding:12px 30px;
     border:none;
     border-radius: 40px;

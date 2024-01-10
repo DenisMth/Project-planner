@@ -28,11 +28,12 @@ let taskId;
 let i;
 
 listcontainer.addEventListener("click", function(e){
-    if(e.target.tagName == "LI"){
+    if(e.target.tagName == "div"){
+        console.log("div clicked");
         e.target.classList.toggle("checked");
         saveData();
     }
-    else if( e.target.tagName == "SPAN"){
+    else if( e.target.tagName == "span"){
         e.target.parentElement.remove();
         taskId = e.target.parentElement.id;
 

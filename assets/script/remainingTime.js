@@ -12,7 +12,7 @@ function displayExisting(variable, name, elem){
 }
 
 function deleteElement(element){
-    let text = element.querySelector("p");
+    let text = element.querySelector("#timer");
     if (text){
         text.remove();
     }
@@ -25,18 +25,19 @@ function newTime(future, idSelected){
 
     now = new Date();
     let interval = dateFns.intervalToDuration({start : now, end : future});
-    let para = document.createElement("p");
-    para.className = "remainingTimer";
-    let paraContent = document.createTextNode("");
+    let timer = document.createElement("p");
+    timer.id = "timer";
+    timer.className = "remainingTimer";
+    let timerContent = document.createTextNode("");
 
     for (let element in interval) {
-        displayExisting(interval[element], element, para);
+        displayExisting(interval[element], element, timer);
     };
     let text = document.createTextNode("remaining");
-    para.appendChild(text);
+    timer.appendChild(text);
 
-    para.appendChild(paraContent);
-    htmlElement.appendChild(para);
+    timer.appendChild(timerContent);
+    htmlElement.appendChild(timer);
     
 }
 
