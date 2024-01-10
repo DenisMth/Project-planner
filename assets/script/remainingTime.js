@@ -12,15 +12,16 @@ function displayExisting(variable, name, elem){
 }
 
 function deleteElement(element){
-    let text = document.querySelector("p");
+    let text = element.querySelector("p");
     if (text){
         text.remove();
     }
 }
 
-function newTime(future, htmlElement){
+function newTime(future, idSelected){
 
-    deleteElement(document.getElementsByClassName("remainingTimer"));
+    let htmlElement = document.getElementById(idSelected);
+    deleteElement(htmlElement);
 
     now = new Date();
     let interval = dateFns.intervalToDuration({start : now, end : future});
@@ -39,6 +40,6 @@ function newTime(future, htmlElement){
     
 }
 
-export function displayTimer(future, htmlElement){
-    setInterval(newTime, 1000, future, htmlElement);
+export function displayTimer(future, idSelected){
+    setInterval(newTime, 1000, future, idSelected);
 }

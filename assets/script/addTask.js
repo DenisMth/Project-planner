@@ -33,10 +33,10 @@ export function AddTask() {
         listcontainer.appendChild(li);
         let now = new Date();
         let future = new Date(now.setDate(now.getDate() + 14));
-        displayTimer(future, li);
         let span = document.createElement('span');
         span.innerHTML = "X";
         li.appendChild(span); 
+        displayTimer(future, myId);
      }
     inputBox.value ='';
     saveData()
