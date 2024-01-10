@@ -10,34 +10,34 @@ function randomId(){
 export function AddTask() {
     let inputBox = document.getElementById("input-box");
     let listcontainer = document.getElementById("list-container");
+    const taskContent = inputBox.value.trim();
 
-    if(inputBox.value != ''){
+
+    if(taskContent != ''){
 
         let myId = randomId();
 
         let task = {
-            name:inputBox.value,
+            name:taskContent,
             uniqueId:myId,
             creationDate:new Date(),
             dueDate:new Date(new Date().setDate(new Date().getDate() + 14)),
             done:false,
         };
+        let taskElement = document.createElement('div');
+        let taskId = 'task'+(task.length + 1);
+        taskElement.id = myId
+        taskElement.className = 'task';
+        taskElement.textContent = taskContent;
 
-        tasks.push(task);
+      // Ajout de la tâche à la colonne "To Do"
+      document.getElementById('todo').appendChild(taskElement);
+
+        tasks.push({ id : taskId, content: taskContent});
+        inputBox.value = '';
+    }
+
 
         localStorage.setItem("tasks", JSON.stringify(tasks));
+} 
     
-        let li = document.createElement("li");
-        li.innerHTML = inputBox.value;
-        li.id = myId;
-        listcontainer.appendChild(li);
-        let now = new Date();
-        let future = new Date(now.setDate(now.getDate() + 14));
-        let span = document.createElement('span');
-        span.innerHTML = "X";
-        li.appendChild(span); 
-        displayTimer(future, myId);
-     }
-    inputBox.value ='';
-    saveData()
-}
