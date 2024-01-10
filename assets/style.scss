@@ -39,7 +39,6 @@
     margin-bottom: 25px;
 }
 input{
-    flex: 1;
     border: none;
     outline: none;
     background: transparent;
@@ -124,5 +123,11 @@ ul {
     border-radius: 40px;
     background-color: lightgray;
     margin-right:10px;
+}
+#input-box{
+    width:30%;
+}
+#input-description{
+    width: 60%;
 }
  

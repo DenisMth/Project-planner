@@ -42,7 +42,6 @@
 }
 
 input {
-  flex: 1;
   border: none;
   outline: none;
   background: transparent;
@@ -115,4 +114,12 @@ ul li span:hover {
   border-radius: 40px;
   background-color: lightgray;
   margin-right: 10px;
+}
+
+#input-box {
+  width: 30%;
+}
+
+#input-description {
+  width: 60%;
 }/*# sourceMappingURL=style.css.map */
