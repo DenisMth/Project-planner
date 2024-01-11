@@ -30,7 +30,9 @@ function newTime(future, idSelected){
     let timerContent = document.createTextNode("");
 
     for (let element in interval) {
+        if(interval[element]){
         displayExisting(interval[element], element, timer);
+    }
     };
     let text = document.createTextNode("remaining");
     timer.appendChild(text);
@@ -42,4 +44,5 @@ function newTime(future, idSelected){
 
 export function displayTimer(future, idSelected){
     setInterval(newTime, 1000, future, idSelected);
+
 }

@@ -1,4 +1,4 @@
-import { AddTask } from "./script/addTask.js";
+import { AddTask, createTaskBlock } from "./script/addTask.js";
 import { displayTimer } from "./script/remainingTime.js";
 import { saveData } from "./script/saveData.js";
 import { displayTask } from "./script/displayTask.js";
@@ -14,7 +14,7 @@ function rearrangeArray(){
 
 rearrangeArray();
 
-displayTask(displayTimer);
+displayTask(createTaskBlock, displayTimer);
 let inputBox = document.getElementById("input-box");
 let app = document.getElementById("app");
 let btn = document.getElementById("btn");
@@ -30,6 +30,7 @@ let i;
 app.addEventListener("click", function(e){
     if( e.target.tagName == "SPAN"){
         e.target.parentElement.remove();
+        
         taskId = e.target.parentElement.id;
 
         i = 0;
