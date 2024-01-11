@@ -11,25 +11,48 @@
    background:linear-gradient(135deg, #153677, #4e085f);
    padding: 10px;
 }
+h2{
+    color: #002765;
+    text-align: center;
+    margin-bottom: 20px;
+}
+h3{
+    color:#307bf5;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.timer{
+    margin-top:10px;
+    font-size: 0.8rem;
+}
 .todo-app{
     width:80%;
     background: #fff;
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
-    h2{
-        color: #002765;
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
+    .taille-img{
+        width: 30px;
+        margin-left: 10px;
     }
-    #app {
-        display: flex;
-        width:90%;
-        justify-content: space-around;
-        margin: 20px;
-      }
 }
+#app {
+    width:98%;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    width:98%;
+    justify-content: space-around;
+    margin: 10px;
+    .column {
+        border: 1px solid #ddd;
+        padding: 10px;
+        width: 32%;
+      }
+  }
 .row{
     display: flex;
     align-items: center;
@@ -122,12 +145,6 @@ ul {
         }
     }
  }
-
-  .column {
-    border: 1px solid #ddd;
-    padding: 10px;
-    width: 30%;
-  }
 
 #status{
     padding:12px 30px;

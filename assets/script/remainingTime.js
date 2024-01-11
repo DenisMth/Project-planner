@@ -12,7 +12,7 @@ function displayExisting(variable, name, elem){
 }
 
 function deleteElement(element){
-    let text = element.querySelector("#timer");
+    let text = element.querySelector(".timer");
     if (text){
         text.remove();
     }
@@ -26,8 +26,7 @@ function newTime(future, idSelected){
     now = new Date();
     let interval = dateFns.intervalToDuration({start : now, end : future});
     let timer = document.createElement("p");
-    timer.id = "timer";
-    timer.className = "remainingTimer";
+    timer.className = "timer";
     let timerContent = document.createTextNode("");
 
     for (let element in interval) {

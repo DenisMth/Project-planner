@@ -39,7 +39,7 @@ export function AddTask(displayTime) {
         span.innerHTML = "X";
         div.appendChild(span);
 
-        let title = document.createElement("h2");
+        let title = document.createElement("h3");
         let titleContent = document.createTextNode(task.name);
         title.appendChild(titleContent);
         div.appendChild(title);
@@ -51,8 +51,7 @@ export function AddTask(displayTime) {
 
         div.id = myId;
         listcontainer.appendChild(div);
-        let now = new Date();
-        let future = new Date(now.setDate(now.getDate() + 14)); 
+        let future = new Date(task.dueDate); 
         displayTime(future, myId);
      }
     inputBox.value ="";

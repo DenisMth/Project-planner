@@ -12,6 +12,23 @@
   padding: 10px;
 }
 
+h2 {
+  color: #002765;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: #307bf5;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.timer {
+  margin-top: 10px;
+  font-size: 0.8rem;
+}
+
 .todo-app {
   width: 80%;
   background: #fff;
@@ -19,16 +36,27 @@
   padding: 40px 30px 70px;
   border-radius: 10px;
 }
-.todo-app h2 {
-  color: #002765;
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
 .todo-app .taille-img {
   width: 30px;
-  height: 30px;
   margin-left: 10px;
+}
+
+#app {
+  width: 98%;
+  background: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  width: 98%;
+  justify-content: space-around;
+  margin: 10px;
+}
+#app .column {
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 32%;
 }
 
 .row {

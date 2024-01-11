@@ -19,7 +19,7 @@ export function displayTask(displayTime) {
         span.innerHTML = "X";
         div.appendChild(span); 
 
-        let title = document.createElement("h2");
+        let title = document.createElement("h3");
         let titleContent = document.createTextNode(element.name);
         title.appendChild(titleContent);
         div.appendChild(title);
@@ -31,8 +31,7 @@ export function displayTask(displayTime) {
 
         div.id = element.uniqueId;
         listcontainer.appendChild(div);
-        let now = new Date();
-        let future = new Date(now.setDate(now.getDate() + 14));
+        let future = new Date(element.dueDate);
         displayTime(future, element.uniqueId);
 
         /*
