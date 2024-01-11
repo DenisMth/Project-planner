@@ -51,6 +51,29 @@ h3{
         border: 1px solid #ddd;
         padding: 10px;
         width: 32%;
+        div{
+            position:relative;
+            background-color:rgb(238, 236, 236);
+            padding:12px;
+            border-radius:16px;
+            margin:0.5rem;
+            span{
+                position: absolute;
+                right: 5px;
+                top: 5px;
+                width: 40px;
+                height: 40px;
+                font-size: 22px;
+                color: #ff5945;
+                line-height: 40px;
+                text-align: center;
+                border-radius: 50%;
+                                    &:hover{
+                                        cursor:pointer;
+                                        background: #dadada;
+                                    }
+            }
+        }
       }
   }
 .row{
@@ -119,31 +142,6 @@ ul {
 
     }
 }
- }
- ul{
-    div{
-        position:relative;
-        background-color:rgb(192, 192, 192);
-        padding:12px;
-        border-radius:16px;
-        margin:0.5rem;
-        span{
-            position: absolute;
-            right: 5px;
-            top: 5px;
-            width: 40px;
-            height: 40px;
-            font-size: 22px;
-            color: #ff5945;
-            line-height: 40px;
-            text-align: center;
-            border-radius: 50%;
-                                &:hover{
-                                    cursor:pointer;
-                                    background: #edeef0;
-                                }
-        }
-    }
  }
 
 #status{

@@ -16,7 +16,7 @@ rearrangeArray();
 
 displayTask(displayTimer);
 let inputBox = document.getElementById("input-box");
-let listcontainer = document.getElementById("list-container");
+let app = document.getElementById("app");
 let btn = document.getElementById("btn");
 btn.addEventListener('click', (event) => {
     AddTask(displayTimer);
@@ -27,17 +27,10 @@ btn.addEventListener('click', (event) => {
 let taskId;
 let i;
 
-listcontainer.addEventListener("click", function(e){
-    if(e.target.tagName == "DIV"){
-        console.log("div clicked");
-        e.target.classList.toggle("checked");
-        saveData();
-    }
-    else if( e.target.tagName == "SPAN"){
+app.addEventListener("click", function(e){
+    if( e.target.tagName == "SPAN"){
         e.target.parentElement.remove();
         taskId = e.target.parentElement.id;
-
-        
 
         i = 0;
         while(tasks[i].uniqueId != taskId){

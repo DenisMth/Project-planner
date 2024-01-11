@@ -50,7 +50,18 @@ export function AddTask(displayTime) {
         div.appendChild(para);
 
         div.id = myId;
-        listcontainer.appendChild(div);
+
+        if(task.status == "To do"){
+            let todo = document.getElementById("todo");
+            todo.appendChild(div);
+        } else if(task.status == "Doing"){
+            let doing = document.getElementById("doing");
+            doing.appendChild(div);
+        } else {
+            let done = document.getElementById("done");
+            done.appendChild(div);
+        }
+
         let future = new Date(task.dueDate); 
         displayTime(future, myId);
      }
